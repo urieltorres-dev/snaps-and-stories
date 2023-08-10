@@ -15,7 +15,7 @@ require_once APP_PATH . 'app/home.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="<?php echo APP_ROOT ?>css/home.css" rel="stylesheet"/>
+    <link href="css/home.css" rel="stylesheet"/>
     <title>Snaps & Stories</title>
 </head>
 <body>
@@ -63,7 +63,7 @@ require_once APP_PATH . 'app/home.php';
                 <?php if (!$USUARIO_FOTO_PERFIL) : ?> <!--Si no hay foto de perfil-->
                     <img src="img/profile.png" alt="Foto de perfil" title="Foto de perfil" onclick="toggleMenu()">
                 <?php else : ?> <!--Si hay foto de perfil-->
-                    <img src="<?php echo APP_ROOT ?>helpers/ver.php?s_id=<?php echo $USUARIO_FOTO_PERFIL ?>" alt="Foto de perfil" title="Foto de perfil" onclick="toggleMenu()">
+                    <img src="helpers/ver.php?s_id=<?php echo $USUARIO_FOTO_PERFIL ?>" alt="Foto de perfil" title="Foto de perfil" onclick="toggleMenu()">
                 <?php endif; ?>
             </div>
             <div class="sub-menu-wrap" id="subMenu">
@@ -73,13 +73,13 @@ require_once APP_PATH . 'app/home.php';
                             <?php if (!$USUARIO_FOTO_PERFIL) : ?> <!--Si no hay foto de perfil-->
                                 <img src="img/profile.png" alt="Foto de perfil" title="Foto de perfil">
                             <?php else : ?> <!--Si hay foto de perfil-->
-                                <img src="<?php echo APP_ROOT ?>helpers/ver.php?s_id=<?php echo $USUARIO_FOTO_PERFIL ?>" alt="Foto de perfil" title="Foto de perfil">
+                                <img src="helpers/ver.php?s_id=<?php echo $USUARIO_FOTO_PERFIL ?>" alt="Foto de perfil" title="Foto de perfil">
                             <?php endif; ?>
                         </div>
                         <p><?php echo isset($USUARIO_ID) ? $USUARIO_USERNAME : "USUARIO"?></p> <!--Si hay usuario logueado, muestra su nombre de usuario, sino muestra "USUARIO"-->
                     </div>
                     <hr>
-                    <a href="<?php echo APP_ROOT ?>perfil.php?username=<?php echo $USUARIO_USERNAME ?>&id=<?php echo $USUARIO_ID ?>" class="sub-menu-link"><img src="img/profile.png"><p>Perfil</p><span>></span></a>
+                    <a href="perfil.php?username=<?php echo $USUARIO_USERNAME ?>&id=<?php echo $USUARIO_ID ?>" class="sub-menu-link"><img src="img/profile.png"><p>Perfil</p><span>></span></a>
                     <a href="helpers/logout.php" class="sub-menu-link"><img src="img/logout.png"><p>Cerrar sesion</p><span>></span></a>
                 </div>
             </div>
@@ -102,7 +102,7 @@ require_once APP_PATH . 'app/home.php';
                                     <?php if (!$r["usuario_subio_foto_perfil"]) : ?> <!--Si no hay foto de perfil-->
                                         <img src="img/profile.png" alt="Foto de perfil" title="Foto de perfil">
                                     <?php else : ?> <!--Si hay foto de perfil-->
-                                        <img src="<?php echo APP_ROOT ?>helpers/ver.php?s_id=<?php echo $r["usuario_subio_foto_perfil"] ?>" alt="Foto de perfil" title="Foto de perfil">
+                                        <img src="helpers/ver.php?s_id=<?php echo $r["usuario_subio_foto_perfil"] ?>" alt="Foto de perfil" title="Foto de perfil">
                                     <?php endif; ?>
                                 </div>
                                 <div class="info">
@@ -115,7 +115,7 @@ require_once APP_PATH . 'app/home.php';
                             <p class="desc"><?php echo $r["descripcion"] ?></p>
                         </div>
                         <div class="photo">
-                            <img src="<?php echo APP_ROOT ?>helpers/ver.php?s_id=<?php echo $r["secure_id"] ?>" alt="<?php echo $r["nombre_archivo"] ?>" title="<?php echo $r["nombre_archivo"] ?>">
+                            <img src="helpers/ver.php?s_id=<?php echo $r["secure_id"] ?>" alt="<?php echo $r["nombre_archivo"] ?>" title="<?php echo $r["nombre_archivo"] ?>">
                         </div>
                         <div class="action-buttons">
                             <button class="btn-like" data-foto-id="<?php echo $r["id"] ?>" data-usuario-like="<?php echo $USUARIO_ID ?>">

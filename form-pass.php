@@ -16,16 +16,16 @@ $userId = filter_input(INPUT_GET, 'id');
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo APP_ROOT ?>css/forms-perfil-pass.css">
+    <link rel="stylesheet" href="css/forms-perfil-pass.css">
     <title>Snaps & Stories</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h2 class="log"><a href="<?php echo APP_ROOT . "home.php"; ?>">
+            <h2 class="log"><a href="home.php">
                 Snaps & Stories
             </a></h2>
-            <button role="button" class="btn btn-regresar"><a href="<?php echo APP_ROOT ?>perfil.php?username=<?php echo $USUARIO_USERNAME ?>&id=<?php echo $userId ?>">Regresar</a></button>
+            <button role="button" class="btn btn-regresar"><a href="perfil.php?username=<?php echo $USUARIO_USERNAME ?>&id=<?php echo $userId ?>">Regresar</a></button>
         </div>
     </header>
         <!----------------MAIN---------------->
@@ -36,7 +36,7 @@ $userId = filter_input(INPUT_GET, 'id');
             <div class="middle"> <!--Columna central-->
                 <div class="form-datos">
                     <h3>Editar contraseña</h3>
-                    <form action="<?php echo APP_ROOT ?>app/cambiar-contraseña.php" id="formulario-cambiar-contraseña" method="post">
+                    <form action="app/cambiar-contraseña.php" id="formulario-cambiar-contraseña" method="post">
                         <div class="inputBox">
                             <label for="contraseña-actual">Contraseña anterior:</label>
 							<input type="password" id="contraseña-actual" name="contraseña-actual" required>
@@ -61,6 +61,6 @@ $userId = filter_input(INPUT_GET, 'id');
             </div>
         </div>
     </main>
-    <script src="<?php echo APP_ROOT ?>js/cambiar-contraseña.js"></script>
+    <script src="js/cambiar-contraseña.js"></script>
 </body>
 </html>

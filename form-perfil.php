@@ -17,16 +17,16 @@ $userId = filter_input(INPUT_GET, 'id');
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo APP_ROOT ?>css/forms-perfil-pass.css">
+    <link rel="stylesheet" href="css/forms-perfil-pass.css">
     <title>Snaps & Stories</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h2 class="log"><a href="<?php echo APP_ROOT . "home.php"; ?>">
+            <h2 class="log"><a href="home.php">
                 Snaps & Stories
             </a></h2>
-            <button role="button" class="btn btn-regresar"><a href="<?php echo APP_ROOT ?>perfil.php?username=<?php echo $USUARIO_USERNAME ?>&id=<?php echo $userId ?>">Regresar</a></button>
+            <button role="button" class="btn btn-regresar"><a href="perfil.php?username=<?php echo $USUARIO_USERNAME ?>&id=<?php echo $userId ?>">Regresar</a></button>
         </div>
     </header>
     <!----------------MAIN---------------->
@@ -42,7 +42,7 @@ $userId = filter_input(INPUT_GET, 'id');
                         <?php if (!$USUARIO_FOTO_PERFIL) : ?> <!--Si no hay foto de perfil-->
                             <img src="img/profile.png" alt="Foto de perfil" title="Foto de perfil" onclick="toggleMenu()">
                         <?php else : ?> <!--Si hay foto de perfil-->
-                            <img src="<?php echo APP_ROOT ?>helpers/ver.php?s_id=<?php echo $USUARIO_FOTO_PERFIL ?>" alt="Foto de perfil" title="Foto de perfil" onclick="toggleMenu()">
+                            <img src="helpers/ver.php?s_id=<?php echo $USUARIO_FOTO_PERFIL ?>" alt="Foto de perfil" title="Foto de perfil" onclick="toggleMenu()">
                         <?php endif; ?>
                         </div>
                         <form action="app/foto-perfil.php" id="formulario-foto-perfil" method="post" enctype="multipart/form-data">
@@ -54,7 +54,7 @@ $userId = filter_input(INPUT_GET, 'id');
                 </div>
                 <div class="form-datos">
                     <h3>Editar datos personales</h3>
-                    <form action="<?php echo APP_ROOT ?>app/editar-perfil.php" id="formulario-editar-perfil" method="post">
+                    <form action="app/editar-perfil.php" id="formulario-editar-perfil" method="post">
 						<div class="inputBox">
                         <label for="email">Correo eléctronico: </label>
 							<input type="email" id="email" name="email" value="<?php echo $infoUsuario["email"]?>" required>
@@ -88,7 +88,7 @@ $userId = filter_input(INPUT_GET, 'id');
             </div>
         </div>
     </main>
-    <script src="<?php echo APP_ROOT ?>js/editar-perfil.js"></script>
-    <script src="<?php echo APP_ROOT ?>js/foto-perfil.js"></script>
+    <script src="js/editar-perfil.js"></script>
+    <script src="js/foto-perfil.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ require_once APP_PATH . 'app/buscar-usuario.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="<?php echo APP_ROOT ?>css/buscar.css" rel="stylesheet"/>
+    <link href="css/buscar.css" rel="stylesheet"/>
     <title>Snaps & Stories</title>
 </head>
 <body>
@@ -34,7 +34,7 @@ require_once APP_PATH . 'app/buscar-usuario.php';
                     <input type="text" placeholder="Buscar" id="buscar-usuario" name="buscar-usuario">
                 </form>
             </div>
-            <button role="button" class="btn btn-regresar"><a href="<?php echo APP_ROOT ?>home.php">Regresar</a></button>
+            <button role="button" class="btn btn-regresar"><a href="home.php">Regresar</a></button>
         </div>
     </nav>
     <!----------------MAIN---------------->
@@ -54,7 +54,7 @@ require_once APP_PATH . 'app/buscar-usuario.php';
                                 <?php if (!$usuario["foto_perfil"]) : ?> <!--Si no hay foto de perfil-->
                                     <img src="img/profile.png" alt="Foto de perfil" title="Foto de perfil">
                                 <?php else : ?> <!--Si hay foto de perfil-->
-                                    <img src="<?php echo APP_ROOT ?>helpers/ver.php?s_id=<?php echo $usuario["foto_perfil"] ?>" alt="Foto de perfil" title="Foto de perfil">
+                                    <img src="helpers/ver.php?s_id=<?php echo $usuario["foto_perfil"] ?>" alt="Foto de perfil" title="Foto de perfil">
                                 <?php endif; ?>
                                 </div>
                                 <div class="info">
@@ -75,6 +75,6 @@ require_once APP_PATH . 'app/buscar-usuario.php';
             </div>
         </div>
     </main>
-    <script src="<?php echo APP_ROOT ?>js/ver-perfil.js"></script>
+    <script src="js/ver-perfil.js"></script>
 </body>
 </html>

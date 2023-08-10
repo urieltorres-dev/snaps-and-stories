@@ -25,13 +25,13 @@ if ($username != $USUARIO_USERNAME) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo APP_ROOT ?>css/perfil.css">
+    <link rel="stylesheet" href="css/perfil.css">
     <title>Snaps & Stories</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h2 class="log"><a href="<?php echo APP_ROOT . "home.php"; ?>" id="usuario-visitante" data-usuario-id="<?php echo $USUARIO_ID ?>">
+            <h2 class="log"><a href="home.php" id="usuario-visitante" data-usuario-id="<?php echo $USUARIO_ID ?>">
                 Snaps & Stories
             </a></h2>
         </div>
@@ -44,7 +44,7 @@ if ($username != $USUARIO_USERNAME) {
                     <input type="text" placeholder="Buscar" id="buscar-usuario" name="buscar-usuario">
                 </form>
             </div>
-            <button role="button" class="btn btn-regresar"><a href="<?php echo APP_ROOT ?>home.php">Regresar</a></button>
+            <button role="button" class="btn btn-regresar"><a href="home.php">Regresar</a></button>
         </div>
     </nav>
     <!----------------MAIN---------------->
@@ -57,17 +57,17 @@ if ($username != $USUARIO_USERNAME) {
                     <div class="head">
                         <div class="profile-photo">
                             <?php if ($infoUsuario["foto_perfil"] == null) : ?> <!--Si no hay foto de perfil, mostramos la imagen por defecto-->
-                                <img src="<?php echo APP_ROOT ?>img/profile.png"> <!--Imagen por defecto-->
+                                <img src="img/profile.png"> <!--Imagen por defecto-->
                             <?php else : ?> <!--Si hay foto de perfil, mostramos la foto-->
-                                <img src="<?php echo APP_ROOT ?>helpers/ver.php?s_id=<?php echo $infoUsuario["foto_perfil"] ?>" alt="Foto de perfil" title="Foto de perfil">
+                                <img src="helpers/ver.php?s_id=<?php echo $infoUsuario["foto_perfil"] ?>" alt="Foto de perfil" title="Foto de perfil">
                             <?php endif; ?>
                         </div>
                         <?php if($username == $USUARIO_USERNAME) : ?>
                             <div>
-                                    <button class="btn editar"><a href="<?php echo APP_ROOT ?>form-perfil.php?username=<?php echo $username ?>&id=<?php echo $userId ?>">Editar perfil</a></button>
+                                    <button class="btn editar"><a href="form-perfil.php?username=<?php echo $username ?>&id=<?php echo $userId ?>">Editar perfil</a></button>
                             </div>
                             <div>
-                                    <button class="btn pass"><a href="<?php echo APP_ROOT ?>form-pass.php?username=<?php echo $username ?>&id=<?php echo $userId ?>">Editar contraseña</a></button>
+                                    <button class="btn pass"><a href="form-pass.php?username=<?php echo $username ?>&id=<?php echo $userId ?>">Editar contraseña</a></button>
                             </div>
                         <?php else : ?>
                             <div >
@@ -85,11 +85,11 @@ if ($username != $USUARIO_USERNAME) {
                     <div class="usuarios">
                         <div class="siguiendo">
                             <p><?php echo $numeroFollowin?></p>
-                            <p><a href="<?php echo APP_ROOT . "usuarios.php?username=" . $infoUsuario["username"] . "&id=" . $infoUsuario["id"]?>&tipo=siguiendo">Siguiendo</a></p>
+                            <p><a href="<?php echo "usuarios.php?username=" . $infoUsuario["username"] . "&id=" . $infoUsuario["id"]?>&tipo=siguiendo">Siguiendo</a></p>
                         </div>
                         <div class="seguidores">
                             <p><?php echo $numeroFollowers?></p>
-                            <p><a href="<?php echo APP_ROOT . "usuarios.php?username=" . $infoUsuario["username"] . "&id=" . $infoUsuario["id"] ?>&tipo=seguidores">Seguidores</a></p>
+                            <p><a href="<?php echo "usuarios.php?username=" . $infoUsuario["username"] . "&id=" . $infoUsuario["id"] ?>&tipo=seguidores">Seguidores</a></p>
                         </div>
                     </div>
                     <hr>
@@ -97,7 +97,7 @@ if ($username != $USUARIO_USERNAME) {
                         <?php foreach ($fotos as $r): ?> <!--Recorremos las fotos del usuario-->
                         <div class="imagen" id="btn-foto-<?=$r["secure_id"]?>">
                             <div class="photo">
-                            <img src="<?php echo APP_ROOT ?>helpers/ver.php?s_id=<?php echo $r["secure_id"] ?>" alt="<?php echo $r["descripcion"] ?>" title="<?php echo $r["descripcion"] ?>" style="width: 100%;">
+                            <img src="helpers/ver.php?s_id=<?php echo $r["secure_id"] ?>" alt="<?php echo $r["descripcion"] ?>" title="<?php echo $r["descripcion"] ?>" style="width: 100%;">
                             </div>
                             <?php if($username == $USUARIO_USERNAME) : ?>
                                 <button class="btn delete btn-borrar" data-foto-secure-id="<?=$r["secure_id"]?>" data-foto-usuario-subio-id="<?=$r["usuario_subio_id"]?>">Eliminar</button>
@@ -111,7 +111,7 @@ if ($username != $USUARIO_USERNAME) {
             </div>
         </div>
     </main>
-    <script src="<?php echo APP_ROOT ?>js/borrar-foto.js"></script>
-    <?php if ($username != $USUARIO_USERNAME)  echo "<script src=" . APP_ROOT . "js/seguir.js></script>" ?>
+    <script src="js/borrar-foto.js"></script>
+    <?php if ($username != $USUARIO_USERNAME)  echo "<script src=js/seguir.js></script>" ?>
 </body>
 </html>

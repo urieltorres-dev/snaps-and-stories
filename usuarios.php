@@ -21,16 +21,16 @@ $r = NULL;
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo APP_ROOT ?>css/usuarios.css">
+    <link rel="stylesheet" href="css/usuarios.css">
     <title>Snaps & Stories</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h2 class="log"><a href="<?php echo APP_ROOT . "home.php"; ?>">
+            <h2 class="log"><a href="home.php">
                 Snaps & Stories
             </a></h2>
-            <button role="button" class="btn btn-regresar"><a href="<?php echo APP_ROOT ?>perfil.php?username=<?php echo $username ?>&id=<?php echo $userId ?>">Regresar</a></button>
+            <button role="button" class="btn btn-regresar"><a href="perfil.php?username=<?php echo $username ?>&id=<?php echo $userId ?>">Regresar</a></button>
         </div>
     </header>
     <!----------------MAIN---------------->
@@ -53,9 +53,9 @@ $r = NULL;
                                     <div class="user-info">
                                         <div class="profile-photo">
                                         <?php if ($r["foto_perfil"] == null) : ?> <!--Si no hay foto de perfil, mostramos la imagen por defecto-->
-                                            <img src="<?php echo APP_ROOT ?>img/profile.png"> <!--Imagen por defecto-->
+                                            <img src="img/profile.png"> <!--Imagen por defecto-->
                                         <?php else : ?> <!--Si hay foto de perfil, mostramos la foto-->
-                                            <img src="<?php echo APP_ROOT ?>helpers/ver.php?s_id=<?php echo $r["foto_perfil"] ?>" alt="Foto de perfil" title="Foto de perfil">
+                                            <img src="helpers/ver.php?s_id=<?php echo $r["foto_perfil"] ?>" alt="Foto de perfil" title="Foto de perfil">
                                         <?php endif; ?>
                                         </div>
                                         <div class="info">
@@ -74,9 +74,9 @@ $r = NULL;
                                     <div class="user-info">
                                         <div class="profile-photo">
                                         <?php if ($r["foto_perfil"] == null) : ?> <!--Si no hay foto de perfil, mostramos la imagen por defecto-->
-                                            <img src="<?php echo APP_ROOT ?>img/profile.png"> <!--Imagen por defecto-->
+                                            <img src="img/profile.png"> <!--Imagen por defecto-->
                                         <?php else : ?> <!--Si hay foto de perfil, mostramos la foto-->
-                                            <img src="<?php echo APP_ROOT ?>helpers/ver.php?s_id=<?php echo $r["foto_perfil"] ?>" alt="Foto de perfil" title="Foto de perfil">
+                                            <img src="helpers/ver.php?s_id=<?php echo $r["foto_perfil"] ?>" alt="Foto de perfil" title="Foto de perfil">
                                         <?php endif; ?>
                                         </div>
                                         <div class="info">
