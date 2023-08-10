@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+} 
+
+:root{
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6 1rem;
+    --card-padding: 1rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: scroll;
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow-x: hidden;
+}
+
+/*Estilos generales*/
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.profile-photo{
+    width: 3.5rem;
+    height: 3.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo img{
+    display: block;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover{
+    opacity: 1.2;
+}
+
+.btn-publicar{
+    background: #ff359b;
+}
+.btn-publicar a{
+    color: white;
+    font-weight: 600;
+}
+
+/*HEADER*/
+
+header{
+    width: 100%;
+    background-color: var(--color-white);
+    width: 100%;
+    background: var(--color-white);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 30;
+}
+
+header .log{
+    color: black;
+    margin-left: 0.5rem;
+	font-weight: normal;
+	font-size: 40px;
+}
+
+/*NAVBAR*/
+
+nav{
+    width: 100%;
+    background: var(--color-white);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 4.5rem;
+    z-index: 30;
+}
+
+nav .container{
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav .search-bar{
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+    font-size: 1.5rem;
+}
+nav .search-bar form i{
+    margin-left: 1rem;
+}
+
+nav .search-bar form .btn-buscar{
+    font-size: 1.5rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+nav .search-bar form input[type="text"]{
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-dark);
+}
+nav .search-bar form input[type="text"]::placeholder{
+    color: var(--color-gray);
+}
+nav .search-bar form input[type="text"]:focus{
+    outline: none;
+}
+
+nav .profile-photo{
+    cursor: pointer;
+}
+
+/*Menu Wrap del perfil*/
+.sub-menu-wrap{
+    position: absolute;
+    top: 80%;
+    right: 0;
+    width: 310px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+.sub-menu{
+    background: var(--color-light);
+    padding: 20px;
+    margin: 10px;
+}
+.user-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info p{
+    font-size: 1.2vw;
+    margin-left: 1rem;
+}
+.user-info img{
+    display: block;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+.sub-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--color-dark);
+    margin: 15px 0 10px;
+}
+
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 12px 0;
+}
+
+.sub-menu-link p{
+    width: 100%;
+}
+
+.sub-menu-link img{
+    width: 40px;
+    background: var(--color-dark);
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub-menu-link span{
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span{
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p{
+    font-weight: 600;
+}
+
+/*Modal publicar imagen*/
+/*Efecto*/
+.modalmask {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalmask:target {
+    opacity:1;
+    pointer-events: auto;
+}
+/*Formato de la ventana*/
+.modalbox{
+    width: 500px;
+    position: relative;
+    padding: 5px 20px 13px 20px;
+    background: var(--color-white);
+    border-radius:3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+/*Movimientos*/
+.movedown {
+    margin: 0 auto;
+}
+.modalmask:target .movedown{       
+    margin:10% auto;
+}
+/*Boton de cerrar*/
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: 1px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:3px;
+}
+.close:hover {
+    background: #FAAC58;
+    color:#222;
+}
+.publicar .modalmask form{
+    display: grid;
+    justify-content: center;
+}
+.publicar .modalmask .alinear{
+    display: grid;
+    justify-content: center;
+}
+.publicar .modalmask form h3{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+.publicar .modalmask form hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--color-dark);
+    margin: 15px 0 10px;
+}
+.publicar .modalmask form label{
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.publicar .modalmask form input[type="file"]{
+    overflow: hidden;
+    opacity: 0;
+}
+.publicar .modalmask form label[for="foto"]{
+    padding: 0.6rem 1rem;
+    font-weight: 500;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    background-color: #ff359b;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    width: 14rem;
+    cursor: pointer;
+}
+.publicar .modalmask form label[for="foto"]:hover{
+    opacity: 0.8;
+}
+.publicar .modalmask form textarea{
+    padding: var(--card-padding);
+    background: var(--color-light);
+    font-weight: 500;
+    margin-top: 0.2rem;
+}
+.publicar .modalmask form input[type="submit"]{
+    padding: 0.6rem 1rem;
+    font-weight: 500;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 1.2rem;
+    background: #ff359b;
+    color: white;
+    border: none;
+    width: 14rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.publicar .modalmask form input[type="submit"]:hover{
+    opacity: 1.5;
+}
+
+/* MAIN */
+main{
+    position: relative;
+    top: 10rem;
+}
+
+main .container{
+    display: grid;
+    grid-template-columns: 10vw auto 10vw;
+    column-gap: 2rem;
+    position: relative;
+}
+
+/* FEEDS */
+
+.middle .feeds .feed{
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.middle .feed .head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle .feed .user{
+    display: flex;
+    gap: 1rem;
+}
+
+.middle .feed .user .info{
+    margin-top: 0.5rem;
+}
+
+.middle .feed .head .edit img{
+    width: 1.5rem;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.middle .feed .photo{
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    margin: 0.7rem 0;
+}
+
+.middle .feed .descripcion{
+    max-width: 40vw;
+    word-wrap: break-word;
+    margin: 1rem 0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.middle .feed .action-buttons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+
+.middle .feed .action-buttons .btn-like{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    background: var(--color-white);
+    cursor: pointer;
+}
+
+.middle .feed .action-buttons .btn-like i{
+    font-size: 1.5rem;
+}
+
+.middle .feed .action-buttons .btn-like label{
+    font-weight: 500;
+}
+
+.fa-heart-o{
+    color: black;
+}
+
+.fa-heart-o.color{
+    color: #ff359b;
+}

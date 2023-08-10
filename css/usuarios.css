@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+} 
+
+:root{
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6 1rem;
+    --card-padding: 1rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: scroll;
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow-x: hidden;
+}
+
+/*Estilos generales*/
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.profile-photo{
+    width: 3.5rem;
+    height: 3.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+img{
+    display: block;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+/*HEADER*/
+
+header{
+    width: 100%;
+    background-color: var(--color-white);
+    width: 100%;
+    background: var(--color-white);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 30;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .log{
+    color: black;
+    margin-left: 0.5rem;
+	font-weight: normal;
+	font-size: 40px;
+}
+
+header .btn-regresar{
+    margin: var(--btn-padding);
+    background: #ff359b;
+    font-size: 1.2rem;
+}
+header .btn-regresar a{
+    color: white;
+    font-weight: 500;
+}
+
+/* MAIN */
+
+main{
+    position: relative;
+    top: 5rem;
+}
+
+main .container{
+    display: grid;
+    grid-template-columns: 18vw auto 18vw;
+    column-gap: 2rem;
+    position: relative;
+}
+
+/* USUARIOS */
+
+.middle .usuarios{
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.middle .head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle .user{
+    padding: var(--card-padding);
+}
+
+.head .user-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-seguir{
+    background: #ff359b;
+    color: white;
+}
+
+.middle .info{
+    display: grid;
+    margin-left: 1.5rem;
+}
+
+.middle .action-buttons{
+    display: grid;
+    place-items: center;
+}
+
+.middle .user hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--color-dark);
+    margin: 15px 0 10px;
+}
