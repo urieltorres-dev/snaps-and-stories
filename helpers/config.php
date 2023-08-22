@@ -17,7 +17,7 @@ define("APP_PATH", "C:/xampp/htdocs/snaps_and_stories/");
 define("APP_ROOT", "/snaps_and_stories/");
 
 // Directorio donde se van a guardar los archivos subidos a la aplicación.
-define("DIR_UPLOADS", "/snaps_and_stories/uploads/");
+define("DIR_UPLOADS", "C:/xampp/htdocs/snaps_and_stories/uploads/");
 
 // Extensiones válidas para los archivos de fotos que se van a subir.
 $EXT_ARCHIVOS_FOTOS = ["png", "gif", "jpg", "jpeg"];

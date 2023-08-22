@@ -94,8 +94,6 @@ header .btn-regresar{
     margin: var(--btn-padding);
     background: #ff359b;
     font-size: 1.2rem;
-}
-header .btn-regresar a{
     color: white;
     font-weight: 500;
 }

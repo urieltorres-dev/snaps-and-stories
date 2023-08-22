@@ -34,7 +34,7 @@ require_once APP_PATH . 'app/buscar-usuario.php';
                     <input type="text" placeholder="Buscar" id="buscar-usuario" name="buscar-usuario">
                 </form>
             </div>
-            <button role="button" class="btn btn-regresar"><a href="home.php">Regresar</a></button>
+            <a href="home.php"><button role="button" class="btn btn-regresar">Regresar</button></a>
         </div>
     </nav>
     <!----------------MAIN---------------->

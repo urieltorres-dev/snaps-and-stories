@@ -29,7 +29,7 @@ require_once APP_PATH . 'app/home.php';
     <nav>
         <div class="container">
             <div class="publicar">
-                <button role="button" class="btn btn-publicar"><a href="#modal1">Publicar</a></button>
+                <a href="#modal1"><button role="button" class="btn btn-publicar">Publicar</button></a>
                 <div id="modal1" class="modalmask">
                     <div class="modalbox movedown">
                         <a href="#close" title="Close" class="close">X</a>

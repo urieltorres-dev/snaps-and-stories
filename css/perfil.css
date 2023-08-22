@@ -67,18 +67,8 @@ img{
     opacity: 0.8;
 }
 
-.btn-publicar{
-    background: #ff359b;
-}
-.btn-publicar a{
-    color: white;
-    font-weight: 600;
-}
-
 .btn-regresar{
     background: #ff359b;
-}
-.btn-regresar a{
     color: white;
     font-weight: 600;
 }
@@ -184,9 +174,6 @@ main .container{
     position: relative;
     background: #ff359b;
     top: 1.5rem;
-}
-
-.editar a{
     color: white;
     font-weight: 600;
 }
@@ -195,9 +182,6 @@ main .container{
     position: relative;
     background: #ff359b;
     top: 1.5rem;
-}
-
-.pass a{
     color: white;
     font-weight: 600;
 }

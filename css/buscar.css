@@ -134,8 +134,6 @@ nav .search-bar form input[type="text"]:focus{
 
 nav .btn-regresar{
     background: #ff359b;
-}
-nav .btn-regresar a{
     color: white;
     font-weight: 600;
 }

@@ -25,7 +25,7 @@ $userId = filter_input(INPUT_GET, 'id');
             <h2 class="log"><a href="home.php">
                 Snaps & Stories
             </a></h2>
-            <button role="button" class="btn btn-regresar"><a href="perfil.php?username=<?php echo $USUARIO_USERNAME ?>&id=<?php echo $userId ?>">Regresar</a></button>
+            <a href="perfil.php?username=<?php echo $USUARIO_USERNAME ?>&id=<?php echo $userId ?>"><button role="button" class="btn btn-regresar">Regresar</button></a>
         </div>
     </header>
         <!----------------MAIN---------------->

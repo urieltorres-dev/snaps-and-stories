@@ -44,7 +44,7 @@ if ($username != $USUARIO_USERNAME) {
                     <input type="text" placeholder="Buscar" id="buscar-usuario" name="buscar-usuario">
                 </form>
             </div>
-            <button role="button" class="btn btn-regresar"><a href="home.php">Regresar</a></button>
+            <a href="home.php"><button role="button" class="btn btn-regresar">Regresar</button></a>
         </div>
     </nav>
     <!----------------MAIN---------------->
@@ -64,10 +64,10 @@ if ($username != $USUARIO_USERNAME) {
                         </div>
                         <?php if($username == $USUARIO_USERNAME) : ?>
                             <div>
-                                    <button class="btn editar"><a href="form-perfil.php?username=<?php echo $username ?>&id=<?php echo $userId ?>">Editar perfil</a></button>
+                                    <a href="form-perfil.php?username=<?php echo $username ?>&id=<?php echo $userId ?>"><button class="btn editar">Editar perfil</button></a>
                             </div>
                             <div>
-                                    <button class="btn pass"><a href="form-pass.php?username=<?php echo $username ?>&id=<?php echo $userId ?>">Editar contraseña</a></button>
+                                    <a href="form-pass.php?username=<?php echo $username ?>&id=<?php echo $userId ?>"><button class="btn pass">Editar contraseña</button></a>
                             </div>
                         <?php else : ?>
                             <div >
@@ -79,7 +79,7 @@ if ($username != $USUARIO_USERNAME) {
                         <ul class="datos">
                             <li>Nombre completo: <?php echo $infoUsuario["nombre"] . " " . $infoUsuario["apellidos"] ?></li>
                             <li id="usuario-visitado" data-usuario-id="<?php echo $infoUsuario["id"] ?>">Username: <?php echo $infoUsuario["username"]?></li>
-                            <li>Genero: <?php echo $infoUsuario["genero"]?></li>
+                            <li>Genero: <?php if ($infoUsuario['genero'] === 'M') { echo 'Masculino';} else { echo 'Femenino'; } ?></li>
                         </ul>
                     </div>
                     <div class="usuarios">
