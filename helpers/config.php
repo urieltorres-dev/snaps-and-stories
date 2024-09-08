@@ -11,13 +11,13 @@
  */
 
 // Definimos la ruta física de donde se a ubicar los archivos de nuestra aplicación.
-define("APP_PATH", "C:/xampp/htdocs/snaps_and_stories/");
+define("APP_PATH", __DIR__ . '/../');
 
 // La ruta relativa que corresonde al root de nuestra aplicación.
-define("APP_ROOT", "/snaps_and_stories/");
+define("APP_ROOT", "/");
 
 // Directorio donde se van a guardar los archivos subidos a la aplicación.
-define("DIR_UPLOADS", "C:/xampp/htdocs/snaps_and_stories/uploads/");
+define("DIR_UPLOADS", APP_PATH . 'uploads/');
 
 // Extensiones válidas para los archivos de fotos que se van a subir.
 $EXT_ARCHIVOS_FOTOS = ["png", "gif", "jpg", "jpeg"];
@@ -34,8 +34,8 @@ $CONTENT_TYPES_EXT = [
 ];
 
 // Configuraciones correspondientes a la conexión a base de datos.
-define("DB_DSN", "mysql:host=127.0.0.1;port=3306;dbname=snaps_and_stories;charset=utf8mb4;");
-define("DB_USERNAME", "root"); 
-define("DB_PASSWORD", "");
+define("DB_DSN", getenv('DB_DSN') ?: "mysql:host=127.0.0.1;port=3306;dbname=snaps_and_stories;charset=utf8mb4;");
+define("DB_USERNAME", getenv('DB_USERNAME') ?: "root");
+define("DB_PASSWORD", getenv('DB_PASSWORD') ?: "");
 
 ?>

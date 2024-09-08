@@ -24,10 +24,10 @@
 					<h2>Iniciar Sesión</h2>
 					<form action="app/iniciar-sesion.php" id="formulario-inicio-sesion" method="post">
 						<div class="inputBox">
-							<input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
+							<input type="text" id="username" name="username" placeholder="Nombre de usuario" value="demo_user" required>
 						</div>
 						<div class="inputBox">
-							<input type="password" id="password" name="password" placeholder="Contraseña" required>
+							<input type="password" id="password" name="password" placeholder="Contraseña" value="123456" required>
 						</div>
 						<div class="inputBox">
 							<input type="submit" value="Aceptar">
