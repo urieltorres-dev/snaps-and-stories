@@ -59,7 +59,7 @@ Accede a la aplicación a través de [http://localhost/snaps-and-stories/](http:
 
 ## Enlace a la Demo
 
-Puedes ver una demostración en vivo del proyecto en [snaps-db.zeabur.app](snaps-db.zeabur.app). (Reemplaza con el enlace real a la demo).
+Puedes ver una demostración en vivo del proyecto en [https://snaps-and-stories.zeabur.app/](https://snaps-and-stories.zeabur.app/). (Reemplaza con el enlace real a la demo).
 
 ## Capturas de Pantalla
 
