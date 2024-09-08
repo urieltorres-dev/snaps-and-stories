@@ -55,7 +55,7 @@ Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
 ## Uso
 
-Accede a la aplicación a través de [http://localhost/snaps_and_stories](http://localhost/snaps_and_stories) (ajusta la URL según tu configuración).
+Accede a la aplicación a través de [http://localhost/snaps-and-stories/](http://localhost/snaps-and-stories/).
 
 ## Enlace a la Demo
 
