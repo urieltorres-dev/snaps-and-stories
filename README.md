@@ -1,6 +1,6 @@
 # Snaps & Stories
 
-**Proyecto universitario**
+Este sistema fue desarrollado como parte de un proyecto universitario para la asignatura **"Programación web"**. El objetivo del proyecto fue Desarrollo de una aplicación web completa que incluya los elementos básicos de cualquier aplicación: registro de nuevos usuarios, control de autentificación (login), sesión de usuario, mostrar información en función del usuario y subir información. Esto para demostrar las competencias básicas que corresponden a la programación del lado del cliente (front-end) y del lado del servidor (back-end).
 
 ## Descripción del Proyecto
 
@@ -57,18 +57,18 @@ Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
 Accede a la aplicación a través de [http://localhost/snaps-and-stories/](http://localhost/snaps-and-stories/).
 
-## Enlace a la Demo
-
-Puedes ver una demostración en vivo del proyecto en [https://snaps-and-stories.zeabur.app/](https://snaps-and-stories.zeabur.app/).
-
 ## Capturas de Pantalla
 
 A continuación se muestran algunas capturas de pantalla de la aplicación:
 
-![Captura de Pantalla 1](img/captura1.png)
-![Captura de Pantalla 2](img/captura2.png)
-![Captura de Pantalla 3](img/captura3.png)
-![Captura de Pantalla 4](img/captura4.png)
+![Login](img/captura1.png)
+![Home / News Feed](img/captura2.png)
+![Perfil](img/captura3.png)
+![Modificar datos personales](img/captura4.png)
+
+## Demo
+
+Puedes ver una demostración en vivo del proyecto en [https://snaps-and-stories.zeabur.app/](https://snaps-and-stories.zeabur.app/).
 
 ## Licencia
 
