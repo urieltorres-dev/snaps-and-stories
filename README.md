@@ -1,6 +1,6 @@
 # Snaps & Stories
 
-Este sistema fue desarrollado como parte de un proyecto universitario para la asignatura **"Programación web"**. El objetivo del proyecto fue Desarrollo de una aplicación web completa que incluya los elementos básicos de cualquier aplicación: registro de nuevos usuarios, control de autentificación (login), sesión de usuario, mostrar información en función del usuario y subir información. Esto para demostrar las competencias básicas que corresponden a la programación del lado del cliente (front-end) y del lado del servidor (back-end).
+Este sistema fue desarrollado como parte de un proyecto universitario para la asignatura **"Programación web"**. El objetivo del proyecto fue Desarrollo de una aplicación web completa que incluya los elementos básicos de cualquier aplicación: registro de nuevos usuarios, control de autentificación (login), sesión de usuario, mostrar información en función del usuario y subir información. Esto para demostrar las competencias básicas que corresponden a la programación del lado del cliente (front-end) y del lado del servidor (back-end). Se trabajó en equipo, con un periodo de desarrollo de dos semanas.
 
 ## Descripción del Proyecto
 
@@ -8,7 +8,7 @@ Snaps & Stories es una red social diseñada para compartir fotos y conectar usua
 
 ## Contribuciones del Equipo
 
-Aunque el proyecto fue un esfuerzo colectivo, la mayor parte del desarrollo técnico, incluyendo la programación, la implementación de funcionalidades y el despliegue, fue realizada principalmente por mí, Hernando Uriel Torres de Luna. Mis compañeros del equipo contribuyeron en áreas específicas como el diseño UX/UI y la documentación.
+Aunque el proyecto fue un esfuerzo colectivo, la mayor parte del desarrollo técnico, incluyendo la programación, la implementación de funcionalidades y el despliegue en Digital Ocean, fue realizada principalmente por mí. Mis compañeros del equipo contribuyeron en áreas específicas como el diseño UX/UI y la documentación.
 
 ### Roles del Equipo
 
