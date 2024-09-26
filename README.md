@@ -68,7 +68,7 @@ A continuación se muestran algunas capturas de pantalla de la aplicación:
 
 ## Demo
 
-Puedes ver una demostración en vivo del proyecto en [https://snaps-and-stories.zeabur.app/](https://snaps-and-stories.zeabur.app/).
+Por el momento la demo no está disponible.
 
 ## Licencia
 
